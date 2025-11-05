@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vriksha Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+                fontFamily: {
+                    sans: ['Poppins', 'sans-serif'],
+                },
+                colors: {
+                    'forest-green': '#2E7D32',
+                    'mint-green': '#A5D6A7',
+                    'beige': '#F0F4C3',
+                    'light-white': '#FAFAFA',
+                    'gradient-start': '#81C784',
+                    'gradient-end': '#388E3C',
+                }
+            }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+      .bg-main {
+        background-color: #F0F4C3;
+        background-image:
+          radial-gradient(at 0% 0%, hsla(143, 60%, 90%, 0.4) 0px, transparent 50%),
+          radial-gradient(at 98% 1%, hsla(84, 57%, 89%, 0.6) 0px, transparent 50%);
+      }
+      .dark .bg-main {
+        background-color: #213444;
+         background-image:
+          radial-gradient(at 0% 0%, hsla(195, 25%, 20%, 0.5) 0px, transparent 50%),
+          radial-gradient(at 98% 1%, hsla(208, 26%, 15%, 0.7) 0px, transparent 50%);
+      }
+      .bg-glass {
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .dark .bg-glass {
+        background: rgba(44, 62, 80, 0.6);
+        border: 1px solid rgba(74, 101, 114, 0.5);
+      }
+      .btn-gradient {
+        background-image: linear-gradient(to right, #81C784, #388E3C);
+        transition: all 0.3s ease-in-out;
+      }
+      .btn-gradient:hover {
+        box-shadow: 0 0 20px #81C78490;
+        transform: translateY(-2px);
+      }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.3.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^11.3.11"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

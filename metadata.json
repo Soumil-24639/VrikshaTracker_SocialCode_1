@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Vriksha Tracker – The Sapling Guardian System",
+  "description": "A digital ecosystem to track each planted sapling’s entire lifecycle using unique IDs, GPS tagging, photo timelines, and gamified volunteer engagement, featuring an admin dashboard for analytics.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
